@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   name: {{ .Release.Name }}
 spec:
-  replicas: gi
+  replicas: {{ .Values.ReplicaNumber }}
   selector:
     matchLabels:
       app: {{ .Release.Name }}
